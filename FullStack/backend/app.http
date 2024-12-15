@@ -1,0 +1,71 @@
+### API 1 - List of all Books Details from books table
+GET http://localhost:3000/books/
+
+### API 2 - Add a new book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+   "title": "The Catcher in the Rye",
+   "authorId": 16,
+   "genreId": 9,
+   "pages": 277,
+   "publishedDate": "1951-07-16"
+}
+
+# ('The Fellowship of the Ring', 4, 2, 423, '1954-07-29'),
+# ('Dune', 6, 1, 412, '1965-08-01'),
+# ('Dracula', 21, 8, 418, '1897-05-26'),
+# ('The Picture of Dorian Gray', 12, 9, 254, '1890-07-20'),
+# ('Brave New World', 5, 1, 268, '1932-09-01'),
+# ('Crime and Punishment', 9, 5, 671, '1866-01-01'),
+# ('The Road', 18, 9, 287, '2006-09-26'),
+# ('Anna Karenina', 9, 4, 864, '1877-01-01'),
+# ('The Chronicles of Narnia', 4, 2, 767, '1950-10-16');
+
+
+### API - 5 Updating an existing book details.
+PUT http://localhost:3000/books/5/
+Content-Type: application/json
+
+{
+  "title": "Dune"
+}
+
+###
+
+PUT http://localhost:3000/books/5/
+Content-Type: application/json
+
+{
+  "authorId": 2
+}
+
+###
+
+PUT http://localhost:3000/books/5/
+Content-Type: application/json
+
+{
+  "genreId": 3
+}
+
+###
+PUT http://localhost:3000/books/5/
+Content-Type: application/json
+
+{
+  "pages": 757
+}
+
+###
+PUT http://localhost:3000/books/5/
+Content-Type: application/json
+
+{
+  "publishedDate": "2021-01-12"
+}
+
+
+### API - 4 Delete a book.
+DELETE http://localhost:3000/books/5/
